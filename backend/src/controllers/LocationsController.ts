@@ -72,7 +72,7 @@ class LocationsController {
     const transaction = await knex.transaction();
 
     const location = {
-      image: request.file.filename,
+      image: request.file?.filename,
       name,
       email,
       whatsapp,

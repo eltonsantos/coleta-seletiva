@@ -1,9 +1,9 @@
-import Knex from 'knex';
+import {Knex} from 'knex';
 
 export async function up(knex: Knex) {
   return await knex.schema.createTable('locations', table => {
     table.increments('id').primary();
-    table.string('image').notNullable();
+    table.string('image')
     table.string('name').notNullable();
     table.string('email').notNullable();
     table.string('whatsapp').notNullable();
